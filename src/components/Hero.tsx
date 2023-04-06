@@ -1,4 +1,17 @@
-import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
+import { Title, Text, Container, Button, Overlay, createStyles, rem, keyframes } from '@mantine/core';
+
+export const opacity = keyframes({
+  "0%": {
+    textShadow: '#FFF 1px 0 0',
+    opacity: '0',
+  },
+  '100%': {
+    textShadow: '#FFF 1px 0 10px',
+    opacity: '1',
+  }
+});
+
+
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -20,8 +33,9 @@ const useStyles = createStyles((theme) => ({
   inner: {
     position: 'relative',
     zIndex: 1,
+    animation: `${opacity} 3s linear`,
   },
-
+  
   title: {
     fontWeight: 800,
     fontSize: rem(100),
@@ -34,19 +48,19 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-
+    
     [theme.fn.smallerThan('xs')]: {
       fontSize: rem(28),
       textAlign: 'left',
     },
   },
-
+  
   highlight: {
     color: theme.colors.red[9],
     fontSize: rem(40),
     textShadow: '#000 1px 0 10px, 0 0 1em red',
   },
-
+  
   description: {
     color: theme.colors.gray[0],
     textAlign: 'center',
