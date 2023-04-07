@@ -48,7 +48,8 @@ const useStyles = createStyles((theme) => ({
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
     overflow: 'hidden',
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    backdropFilter: 'blur(5px)',
     color: theme.white,
     display: 'flex',
     flexDirection: 'column',
@@ -62,9 +63,13 @@ const useStyles = createStyles((theme) => ({
 
   header: {
     display: 'flex',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'end',
     height: '100%',
+
+    [theme.fn.largerThan('sm')]: {
+      justifyContent: 'center',
+    },
   },
 
   links: {
@@ -74,6 +79,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   burger: {
+    
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
