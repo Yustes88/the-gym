@@ -24,6 +24,7 @@ const useStyles = createStyles((theme) => ({
   dropdown: {
     position: 'absolute',
     top: HEADER_HEIGHT,
+    height: '100vh',
     left: 0,
     right: 0,
     zIndex: 0,
@@ -31,7 +32,12 @@ const useStyles = createStyles((theme) => ({
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
     overflow: 'hidden',
-    backgroundColor: theme.black,
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    color: theme.white,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
 
     [theme.fn.largerThan('sm')]: {
       display: 'none',
@@ -54,7 +60,6 @@ const useStyles = createStyles((theme) => ({
   burger: {
     [theme.fn.largerThan('sm')]: {
       display: 'none',
-      color: theme.white,
     },
   },
 
@@ -65,7 +70,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colors.wite,
-    fontSize: theme.fontSizes.sm,
+    fontSize: rem(30),
     fontWeight: 500,
 
     '&:hover': {
@@ -119,7 +124,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <Burger opened={opened} onClick={toggle} color='white' className={classes.burger} size="md" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
