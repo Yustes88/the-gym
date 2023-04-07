@@ -5,8 +5,8 @@ export const opacity = keyframes({
     textShadow: '#FFF 1px 0 0',
     opacity: '0',
   },
-  '50%': {
-    textShadow: '#FFF 1px 0 15px',
+  '40%': {
+    textShadow: '#FFF 1px 0 20px',
     opacity: '1',
   },
   '100%': {
@@ -51,7 +51,7 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    animation: `${opacity} 2s linear`,
+    animation: `${opacity} 3s linear`,
 
     
     [theme.fn.smallerThan('xs')]: {
