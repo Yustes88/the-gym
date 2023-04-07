@@ -8,10 +8,26 @@ import {
   Paper,
   Transition,
   rem,
+  keyframes,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 const HEADER_HEIGHT = rem(60);
+
+export const border = keyframes({
+  "0%": {
+    boxShadow: ' inset 0 1px #FFF',
+  },
+  '25%': {
+    boxShadow: 'inset 1px 1px #FFF',
+  },
+  '50%': {
+    boxShadow: 'inset 1px 1px #FFF, inset 0 -1px #FFF',
+  },
+  '100%': {
+    boxShadow: 'inset 1px 1px #FFF, inset -1px -1px #FFF',
+  }
+});
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -75,8 +91,8 @@ const useStyles = createStyles((theme) => ({
     transition: 'all 0.2s',
 
     '&:hover': {
-      boxShadow: 'inset 0 0 5px #FFF',
       textShadow: '#FFF 1px 0 7px',
+      animation: `${border} 0.5s both`,
     },
     
     [theme.fn.smallerThan('sm')]: {
@@ -89,7 +105,7 @@ const useStyles = createStyles((theme) => ({
     '&, &:hover': {
       textShadow: '#FFF 1px 0 7px',
       color: theme.colors.white,
-      borderBottom: '1px solid #FFF',
+      boxShadow: 'inset 1px 1px #FFF, inset -1px -1px #FFF',
     },
   },
 }));
