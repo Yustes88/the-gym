@@ -15,8 +15,9 @@ const HEADER_HEIGHT = rem(60);
 
 const useStyles = createStyles((theme) => ({
   root: {
-    position: 'relative',
-    zIndex: 1,
+    position: 'fixed',
+    zIndex: 2,
+    backgroundColor: 'transparent',
   },
 
   dropdown: {
@@ -37,7 +38,7 @@ const useStyles = createStyles((theme) => ({
 
   header: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
   },
@@ -57,27 +58,29 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
+    padding: `${rem(10)} ${rem(14)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color: theme.colors.wite,
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+      boxShadow: 'inset 0 0 5px #FFF',
+      textShadow: '#FFF 1px 0 7px',
     },
-
+    
     [theme.fn.smallerThan('sm')]: {
       borderRadius: 0,
       padding: theme.spacing.md,
     },
   },
-
+  
   linkActive: {
     '&, &:hover': {
-      backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
+      textShadow: '#FFF 1px 0 7px',
+      color: theme.colors.white,
+      boxShadow: 'inset 0 0 3px #FFF',
     },
   },
 }));
