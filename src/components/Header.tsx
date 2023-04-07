@@ -18,6 +18,7 @@ const useStyles = createStyles((theme) => ({
     position: 'fixed',
     zIndex: 2,
     backgroundColor: 'transparent',
+    borderBottom: 'none',
   },
 
   dropdown: {
@@ -30,6 +31,7 @@ const useStyles = createStyles((theme) => ({
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
     overflow: 'hidden',
+    backgroundColor: theme.black,
 
     [theme.fn.largerThan('sm')]: {
       display: 'none',
@@ -52,6 +54,7 @@ const useStyles = createStyles((theme) => ({
   burger: {
     [theme.fn.largerThan('sm')]: {
       display: 'none',
+      color: theme.white,
     },
   },
 
@@ -110,9 +113,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Group spacing={5} className={classes.links}>
+        <Group spacing={8} className={classes.links}>
           {items}
         </Group>
 

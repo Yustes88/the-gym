@@ -151,7 +151,7 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi voluptate laudantium suscipit recusandae in iusto eveniet, sint expedita minus sed eius.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi.
           </Text>
         </Container>
 
