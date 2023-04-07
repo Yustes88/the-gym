@@ -58,11 +58,12 @@ const useStyles = createStyles((theme) => ({
   highlight: {
     color: theme.colors.red[9],
     fontSize: rem(40),
-    textShadow: '#000 1px 0 10px, 0 0 1em red',
+    textShadow: `#000 1px 0 10px, 0 0 1em ${theme.colors.red[5]}`,
   },
   
   description: {
     color: theme.colors.gray[0],
+    textShadow: '#FFF 1px 0 10px',
     textAlign: 'center',
 
     [theme.fn.smallerThan('xs')]: {
@@ -86,6 +87,9 @@ const useStyles = createStyles((theme) => ({
   control: {
     height: rem(42),
     fontSize: theme.fontSizes.md,
+    color: theme.colors.red,
+    boxShadow: '0 0 10px #FFF',
+
 
     '&:not(:first-of-type)': {
       marginLeft: theme.spacing.md,
