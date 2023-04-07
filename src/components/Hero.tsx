@@ -5,8 +5,12 @@ export const opacity = keyframes({
     textShadow: '#FFF 1px 0 0',
     opacity: '0',
   },
+  '50%': {
+    textShadow: '#FFF 1px 0 15px',
+    opacity: '1',
+  },
   '100%': {
-    textShadow: '#FFF 1px 0 10px',
+    textShadow: '#FFF 1px 0 7px',
     opacity: '1',
   }
 });
@@ -33,14 +37,13 @@ const useStyles = createStyles((theme) => ({
   inner: {
     position: 'relative',
     zIndex: 1,
-    animation: `${opacity} 3s linear`,
   },
   
   title: {
     fontWeight: 800,
     fontSize: rem(100),
     textTransform: 'uppercase',
-    textShadow: '#FFF 1px 0 10px',
+    textShadow: '#FFF 1px 0 7px',
     letterSpacing: rem(-1),
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
@@ -48,6 +51,8 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    animation: `${opacity} 2s linear`,
+
     
     [theme.fn.smallerThan('xs')]: {
       fontSize: rem(28),
@@ -58,13 +63,16 @@ const useStyles = createStyles((theme) => ({
   highlight: {
     color: theme.colors.red[9],
     fontSize: rem(40),
-    textShadow: `#000 1px 0 10px, 0 0 1em ${theme.colors.red[5]}`,
+    textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.red[5]}`,
   },
   
   description: {
     color: theme.colors.gray[0],
-    textShadow: '#FFF 1px 0 10px',
+    textShadow: '#FFF 1px 0 7px',
     textAlign: 'center',
+    opacity: 0,
+    animation: `${opacity} 3s 1s forwards`,
+
 
     [theme.fn.smallerThan('xs')]: {
       fontSize: theme.fontSizes.md,
@@ -78,6 +86,8 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+    opacity: 0,
+    animation: `${opacity} 3s 2s forwards`,
 
     [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',
@@ -88,7 +98,7 @@ const useStyles = createStyles((theme) => ({
     height: rem(42),
     fontSize: theme.fontSizes.md,
     color: theme.colors.red,
-    boxShadow: '0 0 10px #FFF',
+    boxShadow: '0 0 7px #FFF',
 
 
     '&:not(:first-of-type)': {
