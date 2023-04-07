@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center',
 
     [theme.fn.smallerThan('xs')]: {
-      paddingTop: rem(80),
+      // paddingTop: rem(80),
       paddingBottom: rem(50),
     },
   },
@@ -53,17 +53,28 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     animation: `${opacity} 3s linear`,
 
+    [theme.fn.smallerThan('md')]: {
+      fontSize: rem(80),
+    },
     
     [theme.fn.smallerThan('xs')]: {
-      fontSize: rem(28),
+      fontSize: rem(40),
       textAlign: 'left',
     },
   },
   
   highlight: {
     color: theme.colors.red[9],
-    fontSize: rem(40),
+    fontSize: rem(50),
     textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.red[5]}`,
+
+    [theme.fn.smallerThan('md')]: {
+      fontSize: rem(40),
+    },
+
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: rem(20),
+    },
   },
   
   description: {
@@ -132,7 +143,7 @@ export function HeroImageBackground() {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          The Gym {' '}
+          The Gym {''}
           <Text component='span' className={classes.highlight}>
             Studio
           </Text>
@@ -140,18 +151,17 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on Twitter.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi voluptate laudantium suscipit recusandae in iusto eveniet, sint expedita minus sed eius.
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            Get started
+            Join now
           </Button>
-          <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+          {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
             Live demo
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
