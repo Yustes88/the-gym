@@ -62,7 +62,7 @@ const useStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
-
+  
   link: {
     display: 'block',
     lineHeight: 1,
@@ -70,8 +70,9 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colors.wite,
-    fontSize: rem(30),
+    fontSize: theme.fontSizes.lg,
     fontWeight: 500,
+    transition: 'all 0.2s',
 
     '&:hover': {
       boxShadow: 'inset 0 0 5px #FFF',
@@ -88,7 +89,7 @@ const useStyles = createStyles((theme) => ({
     '&, &:hover': {
       textShadow: '#FFF 1px 0 7px',
       color: theme.colors.white,
-      boxShadow: 'inset 0 0 3px #FFF',
+      borderBottom: '1px solid #FFF',
     },
   },
 }));
