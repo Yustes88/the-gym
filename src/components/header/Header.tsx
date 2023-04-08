@@ -11,6 +11,7 @@ import {
   keyframes,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import Logo from '../logo/Logo';
 
 const HEADER_HEIGHT = rem(60);
 
@@ -144,6 +145,8 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing={8} className={classes.links}>
+
+          <Logo/>
           {items}
         </Group>
 

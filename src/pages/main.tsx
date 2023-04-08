@@ -1,5 +1,5 @@
-import { HeaderResponsive } from "@/components/Header";
-import { HeroImageBackground } from "@/components/Hero";
+import { HeaderResponsive } from "@/components/header/Header";
+import { HeroImageBackground } from "@/components/hero/Hero";
 import { HeaderItems } from "@/data/data";
 
 export default function Main() {
