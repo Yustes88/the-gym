@@ -13,7 +13,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import Logo from '../logo/Logo';
 
-const HEADER_HEIGHT = rem(60);
+const HEADER_HEIGHT = rem(70);
 
 export const border = keyframes({
   "0%": {
@@ -65,11 +65,11 @@ const useStyles = createStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'end',
+    justifyContent: 'space-between',
     height: '100%',
 
     [theme.fn.largerThan('sm')]: {
-      justifyContent: 'center',
+      justifyContent: 'space-between',
     },
   },
 
@@ -144,9 +144,8 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Group spacing={8} className={classes.links}>
-
           <Logo/>
+        <Group spacing={8} className={classes.links}>
           {items}
         </Group>
 
