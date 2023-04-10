@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Header,
   Container,
@@ -21,10 +21,10 @@ interface HeaderResponsiveProps {
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
+  const [colorChange, setColorchange] = useState(false);
   const { classes, cx } = useStyles();
 
 
-  const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () =>{
      if(window.scrollY >= 80){
        setColorchange(true);
@@ -33,7 +33,13 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
        setColorchange(false);
      }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbarColor);
+
+    return () => window.removeEventListener('scroll', changeNavbarColor)
+  })
+
 
 
   const items = links.map((link) => (
