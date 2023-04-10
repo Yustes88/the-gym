@@ -1,9 +1,11 @@
 import Image from "next/image"
 import LogoPic from '/public/logo/logo-gym.jpg'
+import { useStyles } from "./styles"
 
 
 
 function Logo() {
+  const {classes} = useStyles();
   return(
     <>
     <div>
@@ -11,9 +13,8 @@ function Logo() {
         <Image
           src={LogoPic}
           alt="The gym fitness studio"
-          width={60}
-          height={60}
-          style={{borderRadius: '50%'}}
+          className={classes.logo}
+          priority
       />
       </a>
     </div>

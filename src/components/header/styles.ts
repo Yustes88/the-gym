@@ -1,6 +1,6 @@
 import { rem, createStyles, keyframes } from "@mantine/core";
 
-export const HEADER_HEIGHT = rem(60);
+export const HEADER_HEIGHT = rem(80);
 
 
 
@@ -53,13 +53,9 @@ export const useStyles = createStyles((theme) => ({
 
   header: {
     display: 'flex',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    justifyContent: 'end',
     height: '100%',
-
-    [theme.fn.largerThan('sm')]: {
-      justifyContent: 'center',
-    },
   },
 
   links: {
