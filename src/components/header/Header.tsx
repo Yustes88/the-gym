@@ -9,6 +9,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { HEADER_HEIGHT, useStyles } from '../header/styles';
+import Logo from '../logo/Logo';
 
 
 
@@ -40,6 +41,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
+        <Logo/>
         <Group spacing={8} className={classes.links}>
           {items}
         </Group>

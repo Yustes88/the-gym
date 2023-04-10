@@ -126,9 +126,12 @@ export const useStyles = createStyles((theme) => ({
     height: rem(42),
     fontSize: theme.fontSizes.md,
     color: theme.colors.red,
+    margin: theme.spacing.sm,
     boxShadow: '0 0 7px #FFF',
     
-    
+    [theme.fn.smallerThan('md')] : {
+      margin: theme.spacing.md,
+    },
     
     '&:not(:first-of-type)': {
       marginLeft: theme.spacing.md,
