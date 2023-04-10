@@ -1,4 +1,5 @@
-import { Title, Text, Container, Button, Overlay, createStyles, rem, keyframes } from '@mantine/core';
+import { keyframes } from "@emotion/react";
+import { createStyles, rem } from "@mantine/core";
 
 export const opacity = keyframes({
   "0%": {
@@ -15,9 +16,24 @@ export const opacity = keyframes({
   }
 });
 
+export const textShadow = keyframes({
+  '0%': {
+    boxShadow: '0 0 1px #FFF',
+    transform: 'scale(1)',
+  },
+  '50%': {
+    boxShadow: '0 0 15px #FFF',
+    transform: 'scale(1.1)',
+  },
+  '100%': {
+    boxShadow: '0 0 1px #FFF',
+    transform: 'scale(1)',
+  },
+})
 
 
-const useStyles = createStyles((theme) => ({
+
+export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
     paddingTop: rem(180),
@@ -50,7 +66,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: `${theme.fontFamily}, Greycliff CF`,
     animation: `${opacity} 3s linear`,
 
     [theme.fn.smallerThan('md')]: {
@@ -64,9 +80,9 @@ const useStyles = createStyles((theme) => ({
   },
   
   highlight: {
-    color: theme.colors.red[9],
+    color: theme.colors.main[4],
     fontSize: rem(50),
-    textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.red[5]}`,
+    textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.main[4]}`,
 
     [theme.fn.smallerThan('md')]: {
       fontSize: rem(40),
@@ -78,6 +94,7 @@ const useStyles = createStyles((theme) => ({
   },
   
   description: {
+    fontSize: rem(20),
     color: theme.colors.gray[0],
     textShadow: '#FFF 1px 0 7px',
     textAlign: 'center',
@@ -110,11 +127,13 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.md,
     color: theme.colors.red,
     boxShadow: '0 0 7px #FFF',
-
-
+    
+    
+    
     '&:not(:first-of-type)': {
       marginLeft: theme.spacing.md,
     },
+    
 
     [theme.fn.smallerThan('xs')]: {
       '&:not(:first-of-type)': {
@@ -122,6 +141,10 @@ const useStyles = createStyles((theme) => ({
         marginLeft: 0,
       },
     },
+  },
+
+  pulse: {
+    animation: `${textShadow} 3s 1s ease-out infinite`,
   },
 
   secondaryControl: {
@@ -133,37 +156,3 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-
-export function HeroImageBackground() {
-  const { classes, cx } = useStyles();
-
-  return (
-    <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
-
-      <div className={classes.inner}>
-        <Title className={classes.title}>
-          The Gym {''}
-          <Text component='span' className={classes.highlight}>
-            Studio
-          </Text>
-        </Title>
-
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi.
-          </Text>
-        </Container>
-
-        <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
-            Join now
-          </Button>
-          {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-            Live demo
-          </Button> */}
-        </div>
-      </div>
-    </div>
-  );
-}
