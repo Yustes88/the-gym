@@ -1,51 +1,34 @@
-import { createStyles } from '@mantine/core';
-import { randomId } from '@mantine/hooks';
+import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
 import { useState, useEffect } from 'react';
-
-const Images = [
-  {
-    id: randomId(),
-    imgSrc: 'news/news-1.jpg',
-    alt: '',
-  },
-  {
-    id: randomId(),
-    imgSrc: 'news/news-2.jpg',
-    alt: '',
-  },
-  {
-    id: randomId(),
-    imgSrc: 'news/news-3.jpg',
-    alt: '',
-  },
-]
-
-export const useStyles = createStyles((theme) => ({
-  container: {
-    height: '80vh',
-    width: '100%',
-  }
-}))
+import { Images } from './data';
+import { useStyles } from './styles';
 
 
-export default function IntervalImages() {
+
+
+export function IntervalImages() {
   const [imageIndex, setImageIndex] = useState(0);
 
-  const { classes, cx } = useStyles();
-
-
- useEffect(() => {
-    setInterval(() => {
+  useEffect(() => {
+   const interval = setInterval(() => {
       setImageIndex(prev => (
         prev === Images.length - 1 ? 0 : prev + 1
       ));
-    }, 5000);
+    }, 8000);
+
+    return () => clearInterval(interval);
   },[])
+  const { classes } = useStyles();
 
   return (
-    <div className={classes.container}>
-      <h1>Image intervals</h1>
-      <div style={{ backgroundImage: `url(${Images[imageIndex].imgSrc})`, height: '60vh' }}></div>
-    </div>
+    <Paper
+      shadow="md"
+      p="xl"
+      radius="md"
+      sx={{ backgroundImage: `url(${Images[imageIndex].imgSrc})` }}
+      className={classes.card}
+    >
+    </Paper>
   );
 }
+
