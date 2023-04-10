@@ -25,6 +25,12 @@ export const useStyles = createStyles((theme) => ({
     zIndex: 2,
     backgroundColor: 'transparent',
     borderBottom: 'none',
+    transition: 'all 0.8s linear',
+  },
+
+  background: {
+    backgroundColor: '#000',
+    opacity: '0.8',
   },
 
   dropdown: {
