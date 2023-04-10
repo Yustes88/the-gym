@@ -1,8 +1,9 @@
 import { createStyles, getStylesRef, rem } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-  price: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+  image: {
+    objectFit: 'cover',
+    objectPosition: 'center',
   },
 
   carousel: {

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
-import { Card, Container, Image } from '@mantine/core';
+import { Card, Container, Image, Title } from '@mantine/core';
 import { Images } from './data';
 import { useStyles } from './styles';
 ;
@@ -15,12 +15,13 @@ export function IntervalImages() {
 
   const slides = Images.map((image) => (
     <Carousel.Slide key={image.id}>
-      <Image src={image.imgSrc} alt = 'efwfewe' height={520} />
+      <Image src={image.imgSrc} alt = {image.alt} className={classes.image} height={620} />
     </Carousel.Slide>
   ));
 
   return (
     <Container>
+      <Title order={2} p='xl' align="center">Our news</Title>
     <Card radius="md" withBorder padding="xl">
       <Card.Section>
         <Carousel
