@@ -1,12 +1,12 @@
-import { HeaderResponsive } from "@/components/header/Header";
 import { HeroImageBackground } from "@/components/hero/Hero";
-import { HeaderItems } from "@/data/data";
+import { MainLayout } from "@/components/layout/MainLayout";
 
 export default function Main() {
   return (
     <>
-    <HeaderResponsive links = {HeaderItems}/>
-    <HeroImageBackground/>
+    <MainLayout>
+      <HeroImageBackground/>
+    </MainLayout>
     </>
   )
 }
