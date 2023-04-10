@@ -1,7 +1,7 @@
 import {DashboardLayoutProps} from "@/components/layout/types";
 import {Container} from "@mantine/core";
 import {useStyles} from "./styles";
-import { HeaderResponsive } from "../Header";
+import { HeaderResponsive } from "../header/Header";
 import { HeaderItems } from "@/data/data";
 
 export function MainLayout(props: DashboardLayoutProps) {
