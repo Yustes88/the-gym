@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
-import { Card, Image } from '@mantine/core';
+import { Card, Container, Image } from '@mantine/core';
 import { Images } from './data';
 import { useStyles } from './styles';
 ;
@@ -20,6 +20,7 @@ export function IntervalImages() {
   ));
 
   return (
+    <Container>
     <Card radius="md" withBorder padding="xl">
       <Card.Section>
         <Carousel
@@ -31,12 +32,13 @@ export function IntervalImages() {
             indicator: classes.carouselIndicator,
           }}
           plugins={[autoplay.current]}
-      onMouseEnter={autoplay.current.stop}
+          onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
         >
           {slides}
         </Carousel>
       </Card.Section>
     </Card>
+          </Container>
   );
 }
