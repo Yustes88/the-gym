@@ -1,30 +1,31 @@
-import { createStyles, rem } from "@mantine/core";
-import { Images } from "./data";
+import { createStyles, getStylesRef, rem } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-  card: {
-    height: rem(600),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+  price: {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
   },
 
-  title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
-    lineHeight: 1.2,
-    fontSize: rem(32),
-    marginTop: theme.spacing.xs,
+  carousel: {
+    '&:hover': {
+      [`& .${getStylesRef('carouselControls')}`]: {
+        opacity: 1,
+      },
+    },
   },
 
-  category: {
-    color: theme.white,
-    opacity: 0.7,
-    fontWeight: 700,
-    textTransform: 'uppercase',
+  carouselControls: {
+    ref: getStylesRef('carouselControls'),
+    transition: 'opacity 150ms ease',
+    opacity: 0,
+  },
+
+  carouselIndicator: {
+    width: rem(4),
+    height: rem(4),
+    transition: 'width 250ms ease',
+
+    '&[data-active]': {
+      width: rem(16),
+    },
   },
 }));

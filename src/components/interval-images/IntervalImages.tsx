@@ -1,34 +1,42 @@
-import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
-import { useState, useEffect } from 'react';
+import { useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import { Carousel } from '@mantine/carousel';
+import { Card, Image } from '@mantine/core';
 import { Images } from './data';
 import { useStyles } from './styles';
-
+;
 
 
 
 export function IntervalImages() {
-  const [imageIndex, setImageIndex] = useState(0);
-
-  useEffect(() => {
-   const interval = setInterval(() => {
-      setImageIndex(prev => (
-        prev === Images.length - 1 ? 0 : prev + 1
-      ));
-    }, 8000);
-
-    return () => clearInterval(interval);
-  },[])
   const { classes } = useStyles();
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
+
+
+  const slides = Images.map((image) => (
+    <Carousel.Slide key={image.id}>
+      <Image src={image.imgSrc} alt = 'efwfewe' height={520} />
+    </Carousel.Slide>
+  ));
 
   return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${Images[imageIndex].imgSrc})` }}
-      className={classes.card}
-    >
-    </Paper>
+    <Card radius="md" withBorder padding="xl">
+      <Card.Section>
+        <Carousel
+          withIndicators
+          loop
+          classNames={{
+            root: classes.carousel,
+            controls: classes.carouselControls,
+            indicator: classes.carouselIndicator,
+          }}
+          plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
+        >
+          {slides}
+        </Carousel>
+      </Card.Section>
+    </Card>
   );
 }
-
