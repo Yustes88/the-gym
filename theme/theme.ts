@@ -9,14 +9,11 @@ const sharedThemeStyles: MantineThemeOverride = {
     },
     body: {
       height: "100vh",
-      overflowY: "hidden",
       color: theme.colorScheme === 'dark' ? theme.white : theme.black,
       background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
     },
     '#__next': {
       height: "100vh",
-      overflowY: "hidden",
-      overflowX: "hidden",
     }
   }),
   fontFamily: "Roboto",
