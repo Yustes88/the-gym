@@ -1,4 +1,5 @@
-import { Title, Text, Container, Button, Overlay, createStyles, rem, keyframes } from '@mantine/core';
+import { keyframes } from "@emotion/react";
+import { createStyles, rem } from "@mantine/core";
 
 export const opacity = keyframes({
   "0%": {
@@ -17,7 +18,7 @@ export const opacity = keyframes({
 
 
 
-const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
     paddingTop: rem(180),
@@ -133,37 +134,3 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-
-export function HeroImageBackground() {
-  const { classes, cx } = useStyles();
-
-  return (
-    <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
-
-      <div className={classes.inner}>
-        <Title className={classes.title}>
-          The Gym {''}
-          <Text component='span' className={classes.highlight}>
-            Studio
-          </Text>
-        </Title>
-
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi.
-          </Text>
-        </Container>
-
-        <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
-            Join now
-          </Button>
-          {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-            Live demo
-          </Button> */}
-        </div>
-      </div>
-    </div>
-  );
-}
