@@ -15,7 +15,7 @@ export function IntervalImages() {
 
   const slides = Images.map((image) => (
     <Carousel.Slide key={image.id}>
-      <Image src={image.imgSrc} alt = {image.alt} className={classes.image} height={620} />
+      <Image src={image.imgSrc} alt = {image.alt} className={classes.image} height={650} />
     </Carousel.Slide>
   ));
 
