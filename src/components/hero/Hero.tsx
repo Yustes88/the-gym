@@ -10,7 +10,7 @@ export function HeroImageBackground() {
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
+        <Title order={1} className={classes.title}>
           The Gym {''}
           <Text component='span' className={classes.highlight}>
             Studio
@@ -18,13 +18,13 @@ export function HeroImageBackground() {
         </Title>
 
         <Container size={640}>
-          <Text size="lg" className={classes.description}>
+          <Text className={classes.description}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi.
           </Text>
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
+          <Button className={cx(classes.control, classes.pulse)} variant="white" size="lg">
             Join now
           </Button>
           {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">

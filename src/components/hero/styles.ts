@@ -16,6 +16,21 @@ export const opacity = keyframes({
   }
 });
 
+export const textShadow = keyframes({
+  '0%': {
+    boxShadow: '0 0 1px #FFF',
+    transform: 'scale(1)',
+  },
+  '50%': {
+    boxShadow: '0 0 15px #FFF',
+    transform: 'scale(1.1)',
+  },
+  '100%': {
+    boxShadow: '0 0 1px #FFF',
+    transform: 'scale(1)',
+  },
+})
+
 
 
 export const useStyles = createStyles((theme) => ({
@@ -51,7 +66,7 @@ export const useStyles = createStyles((theme) => ({
     color: theme.white,
     marginBottom: theme.spacing.xs,
     textAlign: 'center',
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: `${theme.fontFamily}, Greycliff CF`,
     animation: `${opacity} 3s linear`,
 
     [theme.fn.smallerThan('md')]: {
@@ -65,9 +80,9 @@ export const useStyles = createStyles((theme) => ({
   },
   
   highlight: {
-    color: theme.colors.red[9],
+    color: theme.colors.main[4],
     fontSize: rem(50),
-    textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.red[5]}`,
+    textShadow: `#000 1px 0 7px, 0 0 1em ${theme.colors.main[4]}`,
 
     [theme.fn.smallerThan('md')]: {
       fontSize: rem(40),
@@ -79,6 +94,7 @@ export const useStyles = createStyles((theme) => ({
   },
   
   description: {
+    fontSize: rem(20),
     color: theme.colors.gray[0],
     textShadow: '#FFF 1px 0 7px',
     textAlign: 'center',
@@ -111,11 +127,13 @@ export const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.md,
     color: theme.colors.red,
     boxShadow: '0 0 7px #FFF',
-
-
+    
+    
+    
     '&:not(:first-of-type)': {
       marginLeft: theme.spacing.md,
     },
+    
 
     [theme.fn.smallerThan('xs')]: {
       '&:not(:first-of-type)': {
@@ -123,6 +141,10 @@ export const useStyles = createStyles((theme) => ({
         marginLeft: 0,
       },
     },
+  },
+
+  pulse: {
+    animation: `${textShadow} 3s 1s ease-out infinite`,
   },
 
   secondaryControl: {

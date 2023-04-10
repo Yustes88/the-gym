@@ -40,7 +40,7 @@ export const useStyles = createStyles((theme) => ({
     overflow: 'hidden',
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     backdropFilter: 'blur(5px)',
-    color: theme.white,
+    color: theme.colors.main[0],
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -63,6 +63,7 @@ export const useStyles = createStyles((theme) => ({
   },
 
   links: {
+
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
@@ -81,7 +82,7 @@ export const useStyles = createStyles((theme) => ({
     padding: `${rem(10)} ${rem(14)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colors.wite,
+    color: theme.white,
     fontSize: theme.fontSizes.lg,
     fontWeight: 500,
     transition: 'all 0.2s',

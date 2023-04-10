@@ -19,9 +19,9 @@ const sharedThemeStyles: MantineThemeOverride = {
       overflowX: "hidden",
     }
   }),
-  fontFamily: "Poppins",
+  fontFamily: "Roboto",
   headings: {
-    fontFamily: "Poppins",
+    fontFamily: "Roboto",
     fontWeight: 400,
     sizes: {
       h1: {
