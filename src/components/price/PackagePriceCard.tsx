@@ -11,12 +11,15 @@ export function PackagePriceCard(card: PackagePriceCardProps) {
     <List.Item key={feature} className={classes.listItem}>{feature}</List.Item>
   ));
 
+
   return (
     <Card withBorder radius="md" p='xl' className={classes.card}>
       <Card.Section  className={classes.title}> 
         <div>{card.card.title}</div>
       </Card.Section>
 
+      {card.card.status === 'best' ?  <div className={classes.ribbon}><span className={classes.ribbonContent}>Best</span></div>: ''}
+     
 
       <Card.Section className={classes.planCost}>
       <span className={classes.planPrice}>$19</span><span className={classes.planType}>/ Monthly</span>

@@ -9,6 +9,8 @@ export const useStyles = createStyles((theme) => ({
   title: {
     fontSize: rem(50),
     fontWeight: 900,
+    textShadow: '#FFF 1px 0 4px',
+
 
     [theme.fn.smallerThan('sm')]: {
       fontSize: rem(30),

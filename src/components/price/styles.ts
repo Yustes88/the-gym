@@ -3,6 +3,7 @@ import { createStyles, rem } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
 
   card: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -25,6 +26,32 @@ export const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       width: '80%',
     },
+  },
+
+  ribbon: {
+    width: '150px',
+    height: '150px',
+    overflow: 'hidden',
+    position: 'absolute',
+    top: '-10px',
+    right: '-10px',
+  },
+
+  ribbonContent: {
+      left:' -25px',
+      top: '30px',
+      transform: 'rotate(45deg)',
+      position: 'absolute',
+      display: 'block',
+      width: '225px',
+      padding: '10px 0',
+      backgroundColor: theme.other.primaryColor,
+      boxShadow: '0 0px 10px' ,
+      color: '#fff',
+      textShadow: '0 1px 1px rgba(0,0,0,.2)',
+      textTransform: 'uppercase',
+      textAlign: 'center',
+      border: '2px dotted #fff',
   },
 
   title: {
@@ -95,6 +122,8 @@ export const useStylesLayout = createStyles((theme) => ({
     fontSize: rem(50),
     fontWeight: 900,
     padding: '5px 15px',
+    textShadow: '#FFF 1px 0 4px',
+
 
 
     [theme.fn.smallerThan('sm')]: {

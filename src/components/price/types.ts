@@ -4,5 +4,6 @@ export type PackagePriceCardProps = {
     description: string;
     id: string;
     features: string[],
+    status: string,
 }
 }
