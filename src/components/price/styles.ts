@@ -10,8 +10,12 @@ export const useStyles = createStyles((theme) => ({
     color: '#000000',
     textAlign: 'center',
     fontSize: theme.fontSizes.md,
-    width: '80%',
+    width: '100%',
     margin: theme.spacing.xl,
+
+    [theme.fn.smallerThan('md')]: {
+      width: '60%',
+    },
   },
 
   title: {
@@ -20,6 +24,7 @@ export const useStyles = createStyles((theme) => ({
     backgroundColor:'#222f3d',
     color: '#ffffff',
     display: 'inline-block',
+    alignSelf: 'center',
     textTransform: 'uppercase',
   },
 

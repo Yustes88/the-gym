@@ -16,6 +16,12 @@ import { mockdata } from './data';
 
 const useStyles = createStyles((theme) => ({
 
+  grid: {
+    [theme.fn.smallerThan('md')]: {
+      justifyItems: 'center',
+    },
+  },
+
   title: {
     fontSize: rem(34),
     fontWeight: 900,
@@ -61,7 +67,7 @@ export function PriceLayout() {
         hunger drives it to try biting a Steel-type Pokémon.
       </Text>
 
-      <SimpleGrid cols={2} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
+      <SimpleGrid className={classes.grid} cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
         {cards}
       </SimpleGrid>
     </Container>
