@@ -12,6 +12,11 @@ export const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.md,
     width: '100%',
     margin: theme.spacing.xl,
+    transition: 'all 0.5s ease-out',
+
+    '&:hover': {
+      transform: 'scale(1.1)',
+    },
 
     [theme.fn.smallerThan('md')]: {
       width: '60%',
