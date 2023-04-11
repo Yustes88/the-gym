@@ -15,6 +15,7 @@ import { mockdata } from './data';
 
 
 const useStyles = createStyles((theme) => ({
+
   title: {
     fontSize: rem(34),
     fontWeight: 900,
@@ -49,15 +50,10 @@ export function PriceLayout() {
 
 
   return (
-    <Container size="lg" p="xl" m='xl'>
-      <Group position="center">
-        <Badge variant="filled" size="lg">
-          Best company ever
-        </Badge>
-      </Group>
+    <Container mt='xl'>
 
       <Title order={1} className={classes.title} ta="center" mt="sm">
-        Integrate effortlessly with any technology stack
+        Start your fitness journey today with us
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
@@ -65,7 +61,7 @@ export function PriceLayout() {
         hunger drives it to try biting a Steel-type Pokémon.
       </Text>
 
-      <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]} style={{margin: 'auto'}}>
+      <SimpleGrid cols={2} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
         {cards}
       </SimpleGrid>
     </Container>

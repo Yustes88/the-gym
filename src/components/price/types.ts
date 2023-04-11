@@ -3,5 +3,6 @@ export type PackagePriceCardProps = {
     title: string;
     description: string;
     id: string;
+    features: string[],
 }
 }

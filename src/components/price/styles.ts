@@ -3,11 +3,14 @@ import { createStyles } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
 
   card: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     backgroundColor: theme.white,
     color: '#000000',
     textAlign: 'center',
     fontSize: theme.fontSizes.md,
-    width: '100%',
+    width: '80%',
     margin: theme.spacing.xl,
   },
 
@@ -32,6 +35,25 @@ export const useStyles = createStyles((theme) => ({
 
   planType: {
     opacity: 0.6,
+  },
+
+
+  list: {
+    fontSize: theme.fontSizes.md,
+    textAlign: 'left',
+  },
+
+  listItem: {
+    borderTop: '1px solid #d2d7e2',
+    padding: '10px 5%',
+    
+    '&:nth-of-type(even)': {
+      backgroundColor: 'rgba(0, 0, 0, 0.08)',
+    }
+  },
+
+  button: {
+    marginTop: 'auto',
   },
 
 }))

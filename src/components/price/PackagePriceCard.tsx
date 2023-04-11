@@ -1,14 +1,15 @@
-import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem } from '@mantine/core';
+import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem, List, ThemeIcon } from '@mantine/core';
 import { useStyles } from './styles';
 import { PackagePriceCardProps } from './types';
+import { IconCircleCheck } from '@tabler/icons-react';
 
 
 
 export function PackagePriceCard(card: PackagePriceCardProps) {
   const { classes } = useStyles();
-  // const features = mockdata.map((feature) => (
-
-  // ));
+  const features = card.card.features.map((feature) => (
+    <List.Item key={feature} className={classes.listItem}>{feature}</List.Item>
+  ));
 
   return (
     <Card withBorder radius="md" p='xl' className={classes.card}>
@@ -21,14 +22,22 @@ export function PackagePriceCard(card: PackagePriceCardProps) {
       <span className={classes.planPrice}>$19</span><span className={classes.planType}>/ Monthly</span>
       </Card.Section>
 
-      <Card.Section  mt="md">
-        <Text fz="sm" c="dimmed" >
-          Card list
-        </Text>
+      <Card.Section mt="md">
+        <div style={{  textAlign: 'center'}}>
+          <List
+          size="sm"
+          icon={
+            <ThemeIcon color="teal" size={24} radius="xl">
+              <IconCircleCheck size="1rem" />
+            </ThemeIcon>
+          }>
+            {features}
+          </List>
+        </div>
       </Card.Section>
 
-      <Card.Section>
-        <Button radius="xl" style={{ flex: 1 }}>
+      <Card.Section className={classes.button}>
+        <Button radius="xl" mt='md' style={{ flex: 1 }}>
             Buy now
           </Button>
       </Card.Section>
