@@ -44,8 +44,11 @@ export const useStyles = createStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
 
+    [theme.fn.smallerThan('md')]: {
+      height: 'fit-content',
+    },
+
     [theme.fn.smallerThan('xs')]: {
-      // paddingTop: rem(80),
       paddingBottom: rem(50),
     },
   },
