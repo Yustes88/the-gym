@@ -42,7 +42,8 @@ export const useStyles = createStyles((theme) => ({
     backgroundImage:
       'url(bg/bg-gym.jpg)',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center center',
+    backgroundAttachment: 'fixed',
 
     [theme.fn.smallerThan('md')]: {
       height: 'fit-content',
