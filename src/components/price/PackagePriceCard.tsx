@@ -24,7 +24,7 @@ export function PackagePriceCard({card}: PackagePriceCardProps) {
     <Card withBorder radius="md" p='xl' className={classes.card} ref={ref} style={{
       transform: isInView ? "none" : "translateX(-100px)",
       opacity: isInView ? 1 : 0,
-      transition: "all 1.5s ease-out 0.2s"
+      transition: "all 1s ease-out 0.2s"
     }}>
       <Card.Section  className={classes.title}> 
         <div>{card.title}</div>
