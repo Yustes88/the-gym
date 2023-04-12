@@ -35,6 +35,7 @@ export const useStyles = createStyles((theme) => ({
     position: 'absolute',
     top: '-10px',
     right: '-10px',
+    zIndex: 0,
   },
 
   ribbonContent: {
@@ -45,13 +46,11 @@ export const useStyles = createStyles((theme) => ({
       display: 'block',
       width: '225px',
       padding: '10px 0',
-      backgroundColor: theme.other.primaryColor,
-      boxShadow: '0 0px 10px' ,
+      backgroundColor: theme.colors.main[4],
+      boxShadow: `0 0px 10px ${theme.colors.main[4]}`,
       color: '#fff',
-      textShadow: '0 1px 1px rgba(0,0,0,.2)',
       textTransform: 'uppercase',
       textAlign: 'center',
-      border: '2px dotted #fff',
   },
 
   title: {
@@ -63,6 +62,7 @@ export const useStyles = createStyles((theme) => ({
     display: 'inline-block',
     alignSelf: 'center',
     textTransform: 'uppercase',
+    zIndex: 1,
   },
 
   planCost: {
