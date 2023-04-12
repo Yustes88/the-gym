@@ -1,13 +1,16 @@
 import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem, List, ThemeIcon } from '@mantine/core';
 import { useStyles } from './styles';
-import { PackagePriceCardProps } from './types';
+import { CardProps } from './types';
 import { IconCircleCheck } from '@tabler/icons-react';
 
+type PackagePriceCardProps = {
+  card: CardProps,
+}
 
 
-export function PackagePriceCard(card: PackagePriceCardProps) {
+export function PackagePriceCard({card}: PackagePriceCardProps) {
   const { classes } = useStyles();
-  const features = card.card.features.map((feature) => (
+  const features = card.features.map((feature) => (
     <List.Item key={feature} className={classes.listItem}>{feature}</List.Item>
   ));
 
@@ -15,10 +18,10 @@ export function PackagePriceCard(card: PackagePriceCardProps) {
   return (
     <Card withBorder radius="md" p='xl' className={classes.card}>
       <Card.Section  className={classes.title}> 
-        <div>{card.card.title}</div>
+        <div>{card.title}</div>
       </Card.Section>
 
-      {card.card.status === 'best' ?  <div className={classes.ribbon}><span className={classes.ribbonContent}>Best</span></div>: ''}
+      {card.status === 'best' ?  <div className={classes.ribbon}><span className={classes.ribbonContent}>Best</span></div>: ''}
      
 
       <Card.Section className={classes.planCost}>

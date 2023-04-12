@@ -7,7 +7,7 @@ export function Section({ children }: any ) {
 
   return (
     <section ref={ref}>
-      <div className=""
+      <div
         style={{
           transform: isInView ? "none" : "translateY(100px)",
           opacity: isInView ? 1 : 0,
