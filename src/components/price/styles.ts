@@ -36,12 +36,16 @@ export const useStyles = createStyles((theme) => ({
     top: '-10px',
     right: '-10px',
     zIndex: 0,
+
+    [theme.fn.smallerThan('xs')]: {
+      zIndex: 1,
+    },
   },
 
   ribbonContent: {
-      left:' -25px',
-      top: '30px',
-      transform: 'rotate(45deg)',
+      left:' 6px',
+      top: '22px',
+      transform: 'rotate(50deg)',
       position: 'absolute',
       display: 'block',
       width: '225px',
