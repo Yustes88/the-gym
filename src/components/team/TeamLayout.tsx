@@ -1,5 +1,7 @@
 import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
 import { useStyles } from './styles';
+import { TeamMemberCard } from './TeamMemberCard';
+import { TeamMembers } from './data';
 
 
 
@@ -25,6 +27,7 @@ export function TeamLayout() {
           </Text>
         </Container>
       </div>
+      <TeamMemberCard card={TeamMembers[0]}/>
 
     </div>
   );

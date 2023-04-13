@@ -19,7 +19,7 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text className={classes.description}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem dolorum, voluptas porro commodi.
+            When you want to give up, remember why you started
           </Text>
         </Container>
 
