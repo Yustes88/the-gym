@@ -57,6 +57,9 @@ export const useStyles = createStyles((theme) => ({
   inner: {
     position: 'relative',
     zIndex: 1,
+    maxHeight: 'fit-content',
+    minHeight: 'fit-content',
+    height: '100vh',
   },
   
   title: {
