@@ -10,7 +10,7 @@ import { useStyles } from './styles';
 
 export function IntervalImages() {
   const { classes } = useStyles();
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
+  const autoplay = useRef(Autoplay({ delay: 6000, stopOnInteraction: false }));
 
 
   const slides = Images.map((image) => (
@@ -33,8 +33,8 @@ export function IntervalImages() {
             indicator: classes.carouselIndicator,
           }}
           plugins={[autoplay.current]}
-          onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
+      onTouchMove={autoplay.current.reset}
         >
           {slides}
         </Carousel>
