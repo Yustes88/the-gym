@@ -55,6 +55,11 @@ export const useStyles = createStyles((theme) => ({
     gap: rem(20),
     margin: rem(20),
     overflowY: 'hidden',
+
+    [theme.fn.smallerThan('md')]: {
+     flexDirection: 'column',
+     alignItems: 'center',
+    },
   },
 
   card: {
@@ -62,6 +67,12 @@ export const useStyles = createStyles((theme) => ({
     height: rem(400),
     width: '40%',
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    overflowY: 'hidden',
+
+    [theme.fn.smallerThan('md')]: {
+      width: '60%',
+     },
+
 
     [`&:hover .${getStylesRef('image')}`]: {
       transform: 'scale(1.03)',
@@ -121,6 +132,7 @@ export const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    gap: rem(20),
     position: 'relative',
     cursor: 'pointer',
     overflow: 'hidden',
@@ -128,6 +140,10 @@ export const useStyles = createStyles((theme) => ({
     padding: theme.spacing.xl,
     paddingLeft: `calc(${theme.spacing.xl} * 2)`,
     width: '40%',
+
+    [theme.fn.smallerThan('md')]: {
+      width: '60%',
+     },
 
 
     '&:hover': {

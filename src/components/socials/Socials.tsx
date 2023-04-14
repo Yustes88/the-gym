@@ -8,8 +8,8 @@ type SocialsProps = {
 
 export function Socials({social}: SocialsProps) {
 
-  const getButtonStyles = (link: string) => {
-    switch (link) {
+  const getButtonStyles = (type: string) => {
+    switch (type) {
         case 'Facebook':{
             return <IconBrandFacebook size={rem(18)} />
         }
