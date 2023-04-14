@@ -31,13 +31,13 @@ export function Socials({social}: SocialsProps) {
         href={social.link}
         styles={(theme) => ({
           root: {
-            backgroundColor: '#00acee',
+            backgroundColor: theme.colors.red[7],
             border: 0,
             height: rem(42),
             paddingLeft: rem(20),
             paddingRight: rem(20),
             '&:not([data-disabled])': theme.fn.hover({
-              backgroundColor: theme.fn.darken('#00acee', 0.05),
+              backgroundColor: theme.fn.darken(theme.colors.red[8], 0.05),
             }),
           },
 

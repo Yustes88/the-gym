@@ -8,7 +8,6 @@ export type TeamMembersTypes = {
 
 export type SocialsTypes = {
   link: string,
-  icon?: any,
   id: string,
   label: string,
 }
