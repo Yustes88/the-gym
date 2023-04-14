@@ -2,6 +2,7 @@ import { TeamMembersTypes } from './types';
 
 import { IconBarbell, IconColorSwatch, IconEye, IconMessageCircle } from '@tabler/icons-react';
 import { Card, Text, Group, Center, createStyles, getStylesRef, rem, Container, Paper, ThemeIcon } from '@mantine/core';
+import { BgImage } from './BgImage';
 
 const useStyles = createStyles((theme) => ({
 
@@ -16,6 +17,7 @@ const useStyles = createStyles((theme) => ({
   card: {
     position: 'relative',
     height: rem(400),
+    width: '40%',
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
 
     [`&:hover .${getStylesRef('image')}`]: {
@@ -37,7 +39,7 @@ const useStyles = createStyles((theme) => ({
     ...theme.fn.cover(),
     ref: getStylesRef('image'),
     backgroundSize: 'cover',
-    backgroundPosition: 'center center',
+    backgroundPosition: 'center 25%',
     transition: 'transform 500ms ease',
   },
 
@@ -79,6 +81,8 @@ const useStyles = createStyles((theme) => ({
     transition: 'transform 150ms ease, box-shadow 100ms ease',
     padding: theme.spacing.xl,
     paddingLeft: `calc(${theme.spacing.xl} * 2)`,
+    width: '40%',
+
 
     '&:hover': {
       boxShadow: theme.shadows.md,
@@ -115,7 +119,8 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
       component="a"
       target="_blank"
     >
-      <div className={classes.image} style={{ backgroundImage: `url(${card.image})` }} />
+      <BgImage images={card.images}/>
+      
       <div className={classes.overlay} />
 
       <div className={classes.content}>
@@ -126,7 +131,7 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
 
           <Group position="apart" spacing="xs">
             <Text size="sm" className={classes.author}>
-              {card.author.name}
+              {card.name}
             </Text>
           </Group>
         </div>
@@ -142,12 +147,11 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
       >
         <IconBarbell size={rem(28)} stroke={1.5} />
       </ThemeIcon>
-      <Text size="xl" weight={500} mt="md">
+      <Text size="lg" weight={500} mt="md">
         {card.title}
       </Text>
-      <Text size="sm" mt="sm" color="dimmed">
-        {card.category}
-      </Text>
+      {/* <Text size="sm" mt="sm" color="dimmed">
+      </Text> */}
     </Paper>
       </Container>
   );

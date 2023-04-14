@@ -1,8 +1,7 @@
 export type TeamMembersTypes = {
-  image: string;
-  category: string;
+  images: string[];
+  name: string;
   title: string;
-  date: string;
   author: {
     name: string;
     avatar: string;
