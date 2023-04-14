@@ -4,6 +4,7 @@ import { HeroImageBackground } from "@/components/hero/Hero";
 import { IntervalImages } from "@/components/interval-images/IntervalImages";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PriceLayout } from "@/components/price/PriceLayout";
+import { TeamLayout } from "@/components/team/TeamLayout";
 import { HeaderItems } from "@/data/data";
 
 
@@ -25,6 +26,10 @@ export default function Main() {
 
       <Section>
       <PriceLayout/>
+      </Section>
+
+      <Section>
+        <TeamLayout/>
       </Section>
 
     </MainLayout>
