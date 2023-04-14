@@ -12,6 +12,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     gap: rem(20),
     margin: rem(20),
+    overflowY: 'hidden',
   },
 
   card: {
@@ -111,13 +112,8 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
 
   return (
     <Container className={classes.container}>
-    <Card
-      p="lg"
-      shadow="lg"
+    <div
       className={classes.card}
-      radius="md"
-      component="a"
-      target="_blank"
     >
       <BgImage images={card.images}/>
       
@@ -136,7 +132,7 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
           </Group>
         </div>
       </div>
-    </Card>
+    </div>
 
     <Paper radius="md" className={classes.paper}>
       <ThemeIcon

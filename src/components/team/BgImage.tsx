@@ -30,6 +30,7 @@ export function BgImage({images}: BgImageProps) {
 
   return (
     <Carousel
+    withControls={false}
     loop
     plugins={[autoplay.current]}
 onMouseLeave={autoplay.current.reset}
