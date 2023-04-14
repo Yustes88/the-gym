@@ -29,7 +29,7 @@ export function TeamMembersGroup({members, memberById, setMemberById}: TeamMembe
   
   
   return (
-    <Group position="center" mt='xl'>
+    <Container className={classes.teamContainer}>
       {members.map((member) => {
         const isSelected = member.id === memberById.id;
         return(
@@ -38,7 +38,7 @@ export function TeamMembersGroup({members, memberById, setMemberById}: TeamMembe
         )
       })}
 
-    </Group>
+    </Container>
   );
 
 

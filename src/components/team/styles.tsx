@@ -162,6 +162,15 @@ export const useStyles = createStyles((theme) => ({
     },
   },
 
+  teamContainer: {
+    marginTop: rem(40),
+    maxWidth: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: rem(20),
+    flexWrap: 'wrap',
+  },
+
   button: {
     width: rem(200),
     height: rem(200),
@@ -170,7 +179,7 @@ export const useStyles = createStyles((theme) => ({
   },
 
   selected: {
-    boxShadow: `0 0 20px ${theme.colors.main[6]}`,
+    boxShadow: `0 0 40px ${theme.colors.main[6]}`,
   },
 
 }));
