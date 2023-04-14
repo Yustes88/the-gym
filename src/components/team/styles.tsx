@@ -70,7 +70,12 @@ export const useStyles = createStyles((theme) => ({
     overflowY: 'hidden',
 
     [theme.fn.smallerThan('md')]: {
-      width: '60%',
+      width: '70%',
+     },
+
+
+    [theme.fn.smallerThan('md')]: {
+      width: '90%',
      },
 
 
@@ -142,7 +147,11 @@ export const useStyles = createStyles((theme) => ({
     width: '40%',
 
     [theme.fn.smallerThan('md')]: {
-      width: '60%',
+      width: '70%',
+     },
+     
+    [theme.fn.smallerThan('sm')]: {
+      width: '90%',
      },
 
 
