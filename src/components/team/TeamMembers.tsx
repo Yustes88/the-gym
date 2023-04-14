@@ -13,32 +13,27 @@ import {
   Button,
 } from '@mantine/core';
 import { TeamMembersTypes } from './types';
+import { useStyles } from './styles';
+import { Dispatch, SetStateAction } from 'react';
 
-const useStyles = createStyles((theme) => ({
-  button: {
-    width: rem(200),
-    height: rem(200),
-    backgroundPosition: 'center', 
-    backgroundSize: 'cover',
-  },
-}));
 
 type TeamMembersGroupProps = {
   members: TeamMembersTypes[],
   memberById: TeamMembersTypes,
-  setMemberById: any,
+  setMemberById: Dispatch<SetStateAction<TeamMembersTypes>>,
 }
 
 export function TeamMembersGroup({members, memberById, setMemberById}: TeamMembersGroupProps) {
-  const { classes } = useStyles();
-
-
-
+  const { classes, cx } = useStyles();
+  
+  
+  
   return (
-    <Group position="center">
+    <Group position="center" mt='xl'>
       {members.map((member) => {
+        const isSelected = member.id === memberById.id;
         return(
-          <Button key={member.id} className={classes.button} style={{backgroundImage: `url(${member.images[0]})`}} onClick = {() => setMemberById(member)}>
+          <Button key={member.id} className={`${isSelected ? cx(classes.button, classes.selected) : classes.button}`} style={{backgroundImage: `url(${member.images[0]})`}} onClick = {() => setMemberById(member)}>
           </Button>
         )
       })}

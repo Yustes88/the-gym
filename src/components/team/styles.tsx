@@ -162,4 +162,15 @@ export const useStyles = createStyles((theme) => ({
     },
   },
 
+  button: {
+    width: rem(200),
+    height: rem(200),
+    backgroundPosition: 'center', 
+    backgroundSize: 'cover',
+  },
+
+  selected: {
+    boxShadow: `0 0 20px ${theme.colors.main[6]}`,
+  },
+
 }));
