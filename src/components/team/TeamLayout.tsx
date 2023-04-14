@@ -2,10 +2,14 @@ import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@man
 import { useStyles } from './styles';
 import { TeamMemberCard } from './TeamMemberCard';
 import { TeamMembers } from './data';
+import { TeamMembersGroup } from './TeamMembers';
+import { useState } from 'react';
 
 
 
 export function TeamLayout() {
+  const [memberById, setMemberById] = useState(TeamMembers[0])
+
   const { classes, cx } = useStyles();
 
   return (
@@ -27,7 +31,9 @@ export function TeamLayout() {
           </Text>
         </Container>
       </div>
-      <TeamMemberCard card={TeamMembers[0]}/>
+      <TeamMemberCard card={memberById}/>
+
+      <TeamMembersGroup members={TeamMembers} memberById = {memberById} setMemberById = {setMemberById}/>
 
     </div>
   );

@@ -4,6 +4,7 @@ export type TeamMembersTypes = {
   title: string;
   quote: string;
   socials: SocialsTypes[]
+  id: string,
 }
 
 export type SocialsTypes = {
