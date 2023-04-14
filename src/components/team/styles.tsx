@@ -3,10 +3,8 @@ import { createStyles, rem } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    height: '100vh',
     paddingTop: rem(180),
     paddingBottom: rem(130),
-    marginTop: rem(130),
 
     [theme.fn.smallerThan('xs')]: {
       paddingTop: rem(80),
