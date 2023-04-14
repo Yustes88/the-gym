@@ -3,9 +3,12 @@ export type TeamMembersTypes = {
   name: string;
   title: string;
   quote: string;
-  socials: [
-    {facebook: string},
-    {instagram: string},
-    {tiktok? : string}
-  ]
+  socials: SocialsTypes[]
+}
+
+export type SocialsTypes = {
+  link: string,
+  icon?: any,
+  id: string,
+  label: string,
 }

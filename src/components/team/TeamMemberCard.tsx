@@ -3,6 +3,7 @@ import { TeamMembersTypes } from './types';
 import { IconBarbell, IconColorSwatch, IconEye, IconMessageCircle } from '@tabler/icons-react';
 import { Card, Text, Group, Center, createStyles, getStylesRef, rem, Container, Paper, ThemeIcon } from '@mantine/core';
 import { BgImage } from './BgImage';
+import { Socials } from '../socials/Socials';
 
 const useStyles = createStyles((theme) => ({
 
@@ -143,6 +144,12 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
       <Text size="sm" mt="sm" color="dimmed">
         {card.quote}
       </Text>
+
+      <Group position="center">
+        {card.socials.map((social) => {
+          return(<Socials key={social.id} social={social}/>)
+        })}
+      </Group>
 
       
     </Paper>
