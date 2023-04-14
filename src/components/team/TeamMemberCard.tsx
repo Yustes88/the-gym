@@ -119,19 +119,6 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
       
       <div className={classes.overlay} />
 
-      <div className={classes.content}>
-        <div>
-          <Text size="lg" className={classes.title} weight={500}>
-            {card.title}
-          </Text>
-
-          <Group position="apart" spacing="xs">
-            <Text size="sm" className={classes.author}>
-              {card.name}
-            </Text>
-          </Group>
-        </div>
-      </div>
     </div>
 
     <Paper radius="md" className={classes.paper}>
@@ -143,11 +130,21 @@ export function TeamMemberCard({card}: TeamMemberCardProps) {
       >
         <IconBarbell size={rem(28)} stroke={1.5} />
       </ThemeIcon>
-      <Text size="lg" weight={500} mt="md">
-        {card.title}
+      <Text size="lg" className={classes.title} weight={500} mt="md">
+            {card.title}
       </Text>
-      {/* <Text size="sm" mt="sm" color="dimmed">
-      </Text> */}
+
+      <Group position="apart" spacing="xs">
+          <Text size="sm" className={classes.author}>
+              {card.name}
+          </Text>
+      </Group>
+
+      <Text size="sm" mt="sm" color="dimmed">
+        {card.quote}
+      </Text>
+
+      
     </Paper>
       </Container>
   );
