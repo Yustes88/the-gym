@@ -2,8 +2,9 @@ import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core
 import { CustomAppProps } from '../../page';
 import { useLocalStorage } from '@mantine/hooks';
 import { darkTheme, lightTheme } from '../../theme/theme';
+import { appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps }: CustomAppProps) {
+ function App({ Component, pageProps }: CustomAppProps) {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: 'demo-color-scheme',
     defaultValue: 'dark',
@@ -26,3 +27,6 @@ setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 </MantineProvider>
   )
 }
+
+
+export default appWithTranslation(App)
