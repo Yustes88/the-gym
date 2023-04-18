@@ -13,7 +13,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations.js';
 
 
 export default function Main() {
-  const { t } = useTranslation('common')
 
   return (
     <>

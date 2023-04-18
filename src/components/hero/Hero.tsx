@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 
 export function HeroImageBackground() {
   const { classes, cx } = useStyles();
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('main')
 
 
   return (
@@ -23,7 +23,7 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text className={classes.description}>
-          {t('intro qt')}
+          {t('intro_msg')}
           </Text>
         </Container>
 
