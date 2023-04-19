@@ -1,14 +1,19 @@
-import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
+import { Title, Text, Container } from '@mantine/core';
 import { useStyles } from './styles';
 import { TeamMemberCard } from './TeamMemberCard';
-import { TeamMembers } from './data';
 import { TeamMembersGroup } from './TeamMembers';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import { TeamMembersTypes } from './types';
 
 
 
 export function TeamLayout() {
-  const [memberById, setMemberById] = useState(TeamMembers[0])
+  const { t } = useTranslation('team')
+  const teamData: TeamMembersTypes[] = (t('team_data', {returnObjects: true}));
+  const [memberById, setMemberById] = useState(teamData[0])
+  console.log(teamData)
+  console.log(memberById)
 
   const { classes, cx } = useStyles();
 
@@ -18,22 +23,21 @@ export function TeamLayout() {
 
       <div className={classes.inner}>
         <Title className={classes.title} p='xl'>
-          Meet our{' '}
+          {t('team_title')}{' '}
           <Text component="span" className={classes.highlight} inherit>
-            team
+          {t('team_subtitle')}
           </Text>{' '}
         </Title>
 
         <Container p='xl' size={600}>
           <Text size="lg" color="dimmed" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on Twitter.
+            {t('team_text')}
           </Text>
         </Container>
       </div>
       <TeamMemberCard card={memberById}/>
 
-      <TeamMembersGroup members={TeamMembers} memberById = {memberById} setMemberById = {setMemberById}/>
+      <TeamMembersGroup members={teamData} memberById = {memberById} setMemberById = {setMemberById}/>
 
     </div>
   );

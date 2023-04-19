@@ -1,0 +1,132 @@
+{
+  "team_title": "พบกับเรา",
+  "team_subtitle": "ทีม",
+  "team_text": "สร้างซอฟต์แวร์ที่เชื่อถือได้มากขึ้นด้วยคู่หู AI AI ยังได้รับการฝึกฝนให้ตรวจจับนักพัฒนาขี้เกียจที่ไม่ทําอะไรเลยและเพียงแค่บ่นบน Twitter",
+  "team_data": [
+    {
+      "id": "fml;dsjkfosekf;slefjk'",
+      "images": ["/team/boat/boat-1.jpg", "/team/boat/boat-2.jpg", "/team/boat/boat-3.jpg"],
+      "name": "Kanisond Sinma (Boat)",
+      "title": "ผู้ฝึกสอนส่วนบุคคล, นางแบบ, อินฟลูเอนเซอร์",
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "socials": [
+        {
+          "link": "/",
+          "id": "dmneoiruewhnrfj;wes",
+          "label": "Facebook"
+        },
+        {
+          "link": "/",
+          "id": "f,mel;fj[owekfj[ew",
+          "label": "Instagram"
+        },
+        {
+          "link": "/",
+          "id": "emnklfgergvdbdsb",
+          "label": "TikTok"
+        }
+        
+      ]
+    },
+    {
+      "id": "mefkwlfjpweojf[woe",
+      "images": ["/team/pui/pui-1.jpg"],
+      "name": "Pui",
+      "title": "Personal trainer, model, influencer",
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "socials": [
+        {
+          "link": "/",
+          "id": "ee8yhrbfewa['if[a",
+          "label": "Facebook"
+        },
+        {
+          "link": "/",
+          "id": "mefnjeuy90fwehlt",
+          "label": "Instagram"
+        },
+        {
+          "link": "/",
+          "id": "el;ofjpoerwg",
+          "label": "TikTok"
+        }
+        
+      ]
+    },
+    {
+      "id": "ejoifuoewhblgve",
+      "images": ["/team/coach1/couch1-1.jpg"],
+      "name": "Personal trainer",
+      "title": "ผู้ฝึกสอนส่วนบุคคล",
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "socials": [
+        {
+          "link": "/",
+          "id": "menro3yrho3iwr",
+          "label": "Facebook"
+        },
+        {
+          "link": "/",
+          "id": "398yrhoil3ehflw",
+          "label": "Instagram"
+        },
+        {
+          "link": "/",
+          "id": "lksiujfpesfnlkeshl",
+          "label": "TikTok"
+        }
+        
+      ]
+    },
+    {
+      "id": "opsiur9o0werfhewlfh",
+      "images": ["/team/coach2/couch2-1.jpg"],
+      "name": "Personal trainer 1",
+      "title": "Personal trainer, model, influencer",
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "socials": [
+        {
+          "link": "/",
+          "id": "csoiucanflvsa",
+          "label": "Facebook"
+        },
+        {
+          "link": "/",
+          "id": "mxnklsuc90shca",
+          "label": "Instagram"
+        },
+        {
+          "link": "/",
+          "id": "nhkiY*(hoiho",
+          "label": "TikTok"
+        }
+        
+      ]
+    },
+    {
+      "id": "jpsjucpahflas",
+      "images": ["/team/boat/boat-1.jpg"],
+      "name": "Personal trainer 2",
+      "title": "Personal trainer, model, influencer",
+      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "socials": [
+        {
+          "link": "/",
+          "id": "cjdivuapndvlk",
+          "label": "Facebook"
+        },
+        {
+          "link": "/",
+          "id": "mndlkvnlsdv;",
+          "label": "Instagram"
+        },
+        {
+          "link": "/",
+          "id": "NLdhsaobfalsf",
+          "label": "TikTok"
+        }
+        
+      ]
+    }
+  ]
+}

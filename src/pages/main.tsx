@@ -17,7 +17,8 @@ export async function getStaticProps({ locale }: any) {
         'common',
         'main',
         'news',
-        'price'
+        'price',
+        'team'
       ])),
       // Will be passed to the page component as props
     },
