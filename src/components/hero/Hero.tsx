@@ -5,7 +5,8 @@ import { useTranslation } from 'next-i18next';
 
 export function HeroImageBackground() {
   const { classes, cx } = useStyles();
-  const { t } = useTranslation('main')
+  const { t: commonT } = useTranslation('common');
+  const { t: mainT } = useTranslation('main');
 
 
   return (
@@ -22,13 +23,13 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text className={classes.description}>
-            {t('quote')}
+            {mainT('quote')}
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={cx(classes.control, classes.pulse)} variant="white" size="lg">
-            Join now
+            {commonT('btn_join')}
           </Button>
           {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
             Live demo
