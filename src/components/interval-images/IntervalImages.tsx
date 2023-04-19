@@ -4,6 +4,7 @@ import { Carousel } from '@mantine/carousel';
 import { Card, Container, Image, Title, rem } from '@mantine/core';
 import { Images } from './data';
 import { useStyles } from './styles';
+import { useTranslation } from 'next-i18next';
 ;
 
 
@@ -11,6 +12,7 @@ import { useStyles } from './styles';
 export function IntervalImages() {
   const { classes } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 6000, stopOnInteraction: false }));
+  const { t: newsT } = useTranslation('news')
 
 
   const slides = Images.map((image) => (
@@ -21,7 +23,9 @@ export function IntervalImages() {
 
   return (
     <Container className={classes.container}>
-      <Title order={2} p='xl' align="center" className={classes.title}>Our news</Title>
+      <Title order={2} p='xl' align="center" className={classes.title}>
+        {newsT('news')}
+      </Title>
     <Card radius="md" withBorder padding="xl">
       <Card.Section>
         <Carousel
