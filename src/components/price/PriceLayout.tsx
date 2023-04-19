@@ -15,7 +15,6 @@ export function PriceLayout() {
   const { t } = useTranslation('price')
 
   const priceData: CardProps[] =  (t('price_data', {returnObjects: true}));
-  console.log(priceData)
 
   const cards = priceData.map((card) => {
     return (<PackagePriceCard card={card} key={card.id}/>)

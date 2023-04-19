@@ -12,6 +12,7 @@ import { HEADER_HEIGHT, useStyles } from '../header/styles';
 import Logo from '../logo/Logo';
 import { Translation, useTranslation } from 'next-i18next';
 import { HeaderItemsTypes } from '@/data/data';
+import LocaleSwitcher from '../locale-switcher/LocaleSwitcher';
 
 
 
@@ -67,6 +68,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} className={colorChange ? cx(classes.root, classes.background) : classes.root}>
       <Container className={classes.header}>
+        <LocaleSwitcher/>
         <Logo/>
         <Group spacing={8} className={classes.links}>
           {items}

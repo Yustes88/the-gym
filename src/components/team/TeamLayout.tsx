@@ -12,8 +12,6 @@ export function TeamLayout() {
   const { t } = useTranslation('team')
   const teamData: TeamMembersTypes[] = (t('team_data', {returnObjects: true}));
   const [memberById, setMemberById] = useState(teamData[0])
-  console.log(teamData)
-  console.log(memberById)
 
   const { classes, cx } = useStyles();
 
