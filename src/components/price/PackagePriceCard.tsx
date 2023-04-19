@@ -1,9 +1,10 @@
-import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem, List, ThemeIcon } from '@mantine/core';
+import { Card, Button, List, ThemeIcon } from '@mantine/core';
 import { useStyles } from './styles';
 import { CardProps } from './types';
 import { IconCircleCheck } from '@tabler/icons-react';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslation } from 'next-i18next';
 
 type PackagePriceCardProps = {
   card: CardProps,
@@ -17,6 +18,7 @@ export function PackagePriceCard({card}: PackagePriceCardProps) {
   ));
   const ref = useRef(null)
   const isInView = useInView(ref, {once: false})
+  const { t } = useTranslation('price')
 
 
 
@@ -34,7 +36,7 @@ export function PackagePriceCard({card}: PackagePriceCardProps) {
      
 
       <Card.Section className={classes.planCost}>
-      <span className={classes.planPrice}>$19</span><span className={classes.planType}>/ Monthly</span>
+      <span className={classes.planPrice}>$19</span><span className={classes.planType}>/ {t('price_duration')}</span>
       </Card.Section>
 
       <Card.Section mt="md">
@@ -53,7 +55,7 @@ export function PackagePriceCard({card}: PackagePriceCardProps) {
 
       <Card.Section className={classes.button}>
         <Button radius="xl" mt='md' style={{ flex: 1 }}>
-            Buy now
+            {t('price_btn')}
           </Button>
       </Card.Section>
     </Card>

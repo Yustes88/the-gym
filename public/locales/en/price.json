@@ -20,5 +20,7 @@
       "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs", "Lorem"],
       "status": "regular"
   }
-  ]
+  ],
+  "price_duration": "Monthly",
+  "price_btn": "Buy now"
 }

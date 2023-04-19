@@ -1,6 +1,7 @@
 import { randomId } from "@mantine/hooks";
+import { CardProps } from "./types";
 
-export const mockdata = [
+export const mockdata: CardProps[] = [
   { title: 'Basic',
     description: 'Lorem ipsum',
     id: randomId(),
