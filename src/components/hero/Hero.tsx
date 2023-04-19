@@ -1,9 +1,12 @@
 import { Title, Text, Container, Button, Overlay } from '@mantine/core';
 import { useStyles } from './styles';
+import { useTranslation } from 'next-i18next';
 
 
 export function HeroImageBackground() {
   const { classes, cx } = useStyles();
+  const { t } = useTranslation('main')
+
 
   return (
     <div className={classes.wrapper}>
@@ -19,7 +22,7 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text className={classes.description}>
-            When you want to give up, remember why you started
+            {t('quote')}
           </Text>
         </Container>
 

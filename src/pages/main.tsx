@@ -6,7 +6,21 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { PriceLayout } from "@/components/price/PriceLayout";
 import { TeamLayout } from "@/components/team/TeamLayout";
 import { HeaderItems } from "@/data/data";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'main',
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
+}
 
 
 
