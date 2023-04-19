@@ -1,4 +1,10 @@
-export const HeaderItems =  [
+export type HeaderItemsTypes = {
+  link: string,
+  label: string,
+}
+
+
+export const HeaderItems: HeaderItemsTypes[] =  [
     {
       "link": "/about",
       "label": "Features"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { JSXElementConstructor, ReactElement, ReactFragment, useEffect, useState } from 'react';
 import {
   Header,
   Container,
@@ -10,6 +10,8 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { HEADER_HEIGHT, useStyles } from '../header/styles';
 import Logo from '../logo/Logo';
+import { Translation, useTranslation } from 'next-i18next';
+import { HeaderItemsTypes } from '@/data/data';
 
 
 
@@ -22,7 +24,14 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const [colorChange, setColorchange] = useState(false);
+  const { t } = useTranslation('common');
   const { classes, cx } = useStyles();
+
+ 
+  const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
+  console.log(nav)
+
+
 
 
   const changeNavbarColor = () =>{
@@ -42,20 +51,22 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
 
 
 
-  const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-        close();
-      }}
-    >
-      {link.label}
-    </a>
-  ));
+     const items = nav.map((link) => (
+      <a
+        key={link.label}
+        href={link.link}
+        className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+        onClick={(event) => {
+          event.preventDefault();
+          setActive(link.link);
+          close();
+        }}
+      >
+        {link.label}
+      </a>
+    ));
+
+  
 
   return (
     <Header height={HEADER_HEIGHT} className={colorChange ? cx(classes.root, classes.background) : classes.root}>
