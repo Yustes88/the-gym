@@ -1,12 +1,15 @@
 import { Button, rem } from '@mantine/core';
 import { SocialsTypes } from '../team/types';
 import { IconBrandFacebook, IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
+import { useStyles } from './styles';
 
 type SocialsProps = {
   social: SocialsTypes;
 }
 
 export function Socials({social}: SocialsProps) {
+  const {classes} = useStyles();
+
 
   const getButtonStyles = (type: string) => {
     switch (type) {
@@ -29,22 +32,7 @@ export function Socials({social}: SocialsProps) {
         target="_blank"
         rel="noopener noreferrer"
         href={social.link}
-        styles={(theme) => ({
-          root: {
-            backgroundColor: theme.colors.red[7],
-            border: 0,
-            height: rem(42),
-            paddingLeft: rem(20),
-            paddingRight: rem(20),
-            '&:not([data-disabled])': theme.fn.hover({
-              backgroundColor: theme.fn.darken(theme.colors.red[8], 0.05),
-            }),
-          },
-
-          leftIcon: {
-            marginRight: theme.spacing.md,
-          },
-        })}
+        className={classes.root}
       >
         {getButtonStyles(social.label)}
       </Button>
