@@ -189,7 +189,7 @@ export const useStyles = createStyles((theme) => ({
   },
 
   selected: {
-    boxShadow: `0 0 40px ${theme.colors.main[6]}`,
+    boxShadow: `0 0 40px ${theme.colors.main[3]}, 0 0 40px ${theme.colors.main[6]}`,
   },
 
 }));

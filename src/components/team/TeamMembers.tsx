@@ -20,10 +20,10 @@ import { Dispatch, SetStateAction } from 'react';
 type TeamMembersGroupProps = {
   members: TeamMembersTypes[],
   memberById: TeamMembersTypes,
-  setMemberById: Dispatch<SetStateAction<TeamMembersTypes>>,
+  scrollCallback: (member: TeamMembersTypes) => void;
 }
 
-export function TeamMembersGroup({members, memberById, setMemberById}: TeamMembersGroupProps) {
+export function TeamMembersGroup({members, memberById, scrollCallback}: TeamMembersGroupProps) {
   const { classes, cx } = useStyles();
   
   
@@ -33,7 +33,7 @@ export function TeamMembersGroup({members, memberById, setMemberById}: TeamMembe
       {members.map((member) => {
         const isSelected = member.id === memberById.id;
         return(
-          <Button key={member.id} className={`${isSelected ? cx(classes.button, classes.selected) : classes.button}`} style={{backgroundImage: `url(${member.images[0]})`}} onClick = {() => setMemberById(member)}>
+          <Button key={member.id} className={`${isSelected ? cx(classes.button, classes.selected) : classes.button}`} style={{backgroundImage: `url(${member.images[0]})`}} onClick = {() => scrollCallback(member)}>
           </Button>
         )
       })}
