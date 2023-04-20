@@ -1,3 +1,4 @@
+import { Faq } from "@/components/faq/FAQ";
 import { FooterCentered } from "@/components/footer/Footer";
 import { Section } from "@/components/framer-motion/ScrollAnimation";
 import { HeaderResponsive } from "@/components/header/Header";
@@ -19,7 +20,8 @@ export async function getStaticProps({ locale }: any) {
         'main',
         'news',
         'price',
-        'team'
+        'team',
+        'faq'
       ])),
       // Will be passed to the page component as props
     },
@@ -48,6 +50,10 @@ export default function Main() {
 
       <Section>
         <TeamLayout/>
+      </Section>
+
+      <Section>
+        <Faq/>
       </Section>
 
         <FooterCentered/>
