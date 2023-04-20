@@ -1,9 +1,9 @@
-import { createStyles, Anchor, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { Anchor, Group } from '@mantine/core';
 import Logo from '../logo/Logo';
-import { HeaderItemsTypes } from '@/data/data';
+import { GymSocials, HeaderItemsTypes } from '@/data/data';
 import { useTranslation } from 'next-i18next';
 import { useStyles } from './styles';
+import { Socials } from '../socials/Socials';
 
 
 export function FooterCentered() {
@@ -32,17 +32,10 @@ export function FooterCentered() {
 
         <Group className={classes.links}>{items}</Group>
 
-        <Group spacing="xs" position="right" noWrap>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandTwitter size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandInstagram size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-        </Group>
+        {GymSocials.map((social) => {
+          return(<Socials key={social.id} social={social}/>)
+        })}
+
       </div>
     </div>
   );
