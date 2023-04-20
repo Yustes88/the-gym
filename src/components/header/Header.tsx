@@ -29,7 +29,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const { classes, cx } = useStyles();
 
  
-  const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
+const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
 
   const changeNavbarColor = () =>{
      if(window.scrollY >= 80){
