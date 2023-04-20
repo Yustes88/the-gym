@@ -1,0 +1,26 @@
+{
+  "price_title": "เริ่มต้นเส้นทางการออกกําลังกายของคุณวันนี้กับเรา",
+  "price_text": "ข้อความตัวอย่างบางส่วนที่ไม่มีความหมาย มันจะมีการเปลี่ยนแปลงในภายหลัง",
+  "price_data": [
+    { "title": "พื้นฐาน",
+      "description": "Lorem ipsum",
+      "id": "dlkfjio*HIB",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs", "Lorem", "Ipsum"],
+      "status": "regular"
+  },
+    { "title": "มืออาชีพ",
+      "description": "Lorem ipsum",
+      "id": "Jjdsaohdnsha98hno",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs"],
+      "status": "best"
+  },
+    { "title": "ที่สุด",
+      "description": "Lorem ipsum",
+      "id": "JIpmnlKNGHFNIOI",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs", "Lorem"],
+      "status": "regular"
+  }
+  ],
+  "price_duration": "รายเดือน",
+  "price_btn": "ซื้อตอนนี้"
+}

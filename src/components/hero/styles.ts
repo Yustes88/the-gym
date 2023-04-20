@@ -40,7 +40,7 @@ export const useStyles = createStyles((theme) => ({
     paddingBottom: rem(130),
     height: '100vh',
     backgroundImage:
-      'url(bg/bg-gym.jpg)',
+      'url(/bg/bg-gym.jpg)',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundAttachment: 'fixed',

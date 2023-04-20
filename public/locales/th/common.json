@@ -1,0 +1,21 @@
+{
+  "btn_join": "เข้าร่วมเดี๋ยวนี้",
+  "nav" : [
+    {
+      "link": "/about",
+      "label": "หน้าตา"
+    },
+    {
+      "link": "/pricing",
+      "label": "ราคา"
+    },
+    {
+      "link": "/learn",
+      "label": "เรียน"
+    },
+    {
+      "link": "/community",
+      "label": "ชุมชน"
+    }
+  ]
+}

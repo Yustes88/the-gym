@@ -1,10 +1,6 @@
-export type HeaderItemsTypes = {
-  link: string,
-  label: string,
-}
-
-
-export const HeaderItems: HeaderItemsTypes[] =  [
+{
+  "btn_join": "Join now",
+  "nav" : [
     {
       "link": "/about",
       "label": "Features"
@@ -21,4 +17,5 @@ export const HeaderItems: HeaderItemsTypes[] =  [
       "link": "/community",
       "label": "Community"
     }
-  ];
+  ]
+}

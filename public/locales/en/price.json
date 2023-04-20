@@ -1,0 +1,26 @@
+{
+  "price_title": "Start your fitness journey today with us",
+  "price_text": "Some example text with no meaning. It will be changed later",
+  "price_data": [
+    { "title": "Basic",
+      "description": "Lorem ipsum",
+      "id": "dlkfjio*HIB",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs", "Lorem", "Ipsum"],
+      "status": "regular"
+  },
+    { "title": "Professional",
+      "description": "Lorem ipsum",
+      "id": "Jjdsaohdnsha98hno",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs"],
+      "status": "best"
+  },
+    { "title": "Ultra",
+      "description": "Lorem ipsum",
+      "id": "JIpmnlKNGHFNIOI",
+      "features": ["Cardio", "Weights", "Treadmill", "Low fat", "Carbs", "Lorem"],
+      "status": "regular"
+  }
+  ],
+  "price_duration": "Monthly",
+  "price_btn": "Buy now"
+}

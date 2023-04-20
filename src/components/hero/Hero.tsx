@@ -1,9 +1,13 @@
 import { Title, Text, Container, Button, Overlay } from '@mantine/core';
 import { useStyles } from './styles';
+import { useTranslation } from 'next-i18next';
 
 
 export function HeroImageBackground() {
   const { classes, cx } = useStyles();
+  const { t: commonT } = useTranslation('common');
+  const { t: mainT } = useTranslation('main');
+
 
   return (
     <div className={classes.wrapper}>
@@ -19,13 +23,13 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text className={classes.description}>
-            When you want to give up, remember why you started
+            {mainT('quote')}
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={cx(classes.control, classes.pulse)} variant="white" size="lg">
-            Join now
+            {commonT('btn_join')}
           </Button>
           {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
             Live demo
