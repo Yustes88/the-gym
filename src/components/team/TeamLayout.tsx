@@ -2,7 +2,7 @@ import { Title, Text, Container } from '@mantine/core';
 import { useStyles } from './styles';
 import { TeamMemberCard } from './TeamMemberCard';
 import { TeamMembersGroup } from './TeamMembers';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { TeamMembersTypes } from './types';
 
@@ -12,6 +12,13 @@ export function TeamLayout() {
   const { t } = useTranslation('team')
   const teamData: TeamMembersTypes[] = (t('team_data', {returnObjects: true}));
   const [memberById, setMemberById] = useState(teamData[0])
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollCallback = (member: TeamMembersTypes) => {
+    setMemberById(member)
+    scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
+ }
+
 
   const { classes, cx } = useStyles();
 
@@ -27,7 +34,7 @@ export function TeamLayout() {
           </Text>{' '}
         </Title>
 
-        <Container p='xl' size={600}>
+        <Container p='xl' size={600} ref={scrollRef}>
           <Text size="lg" color="dimmed" className={classes.description}>
             {t('team_text')}
           </Text>
@@ -35,7 +42,7 @@ export function TeamLayout() {
       </div>
       <TeamMemberCard card={memberById}/>
 
-      <TeamMembersGroup members={teamData} memberById = {memberById} setMemberById = {setMemberById}/>
+      <TeamMembersGroup members={teamData} memberById = {memberById} scrollCallback={scrollCallback}/>
 
     </div>
   );
