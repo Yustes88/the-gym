@@ -1,3 +1,6 @@
+import { SocialsTypes } from "@/components/team/types";
+import { randomId } from "@mantine/hooks";
+
 export type HeaderItemsTypes = {
   link: string,
   label: string,
@@ -22,3 +25,11 @@ export const HeaderItems: HeaderItemsTypes[] =  [
       "label": "Community"
     }
   ];
+
+  export const GymSocials: SocialsTypes[] = [
+    {
+      link: 'https://web.facebook.com/search/top?q=the%20gym%20fitness%20center',
+      id: randomId(),
+      label: 'Facebook',
+    },
+  ]

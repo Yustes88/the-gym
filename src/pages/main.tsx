@@ -1,3 +1,4 @@
+import { FooterCentered } from "@/components/footer/Footer";
 import { Section } from "@/components/framer-motion/ScrollAnimation";
 import { HeaderResponsive } from "@/components/header/Header";
 import { HeroImageBackground } from "@/components/hero/Hero";
@@ -48,6 +49,8 @@ export default function Main() {
       <Section>
         <TeamLayout/>
       </Section>
+
+        <FooterCentered/>
 
     </MainLayout>
     </>

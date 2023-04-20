@@ -11,8 +11,9 @@ import { useDisclosure } from '@mantine/hooks';
 import { HEADER_HEIGHT, useStyles } from '../header/styles';
 import Logo from '../logo/Logo';
 import { Translation, useTranslation } from 'next-i18next';
-import { HeaderItemsTypes } from '@/data/data';
+import { GymSocials, HeaderItemsTypes } from '@/data/data';
 import LocaleSwitcher from '../locale-switcher/LocaleSwitcher';
+import { Socials } from '../socials/Socials';
 
 
 
@@ -29,7 +30,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const { classes, cx } = useStyles();
 
  
-  const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
+const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
 
   const changeNavbarColor = () =>{
      if(window.scrollY >= 80){
@@ -72,6 +73,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         <Logo/>
         <Group spacing={8} className={classes.links}>
           {items}
+          {GymSocials.map((social) => {
+          return(<Socials key={social.id} social={social}/>)
+        })}
         </Group>
 
         <Burger opened={opened} onClick={toggle} color='white' className={classes.burger} size="md" />
@@ -80,6 +84,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
               {items}
+              {GymSocials.map((social) => {
+          return(<Socials key={social.id} social={social}/>)
+        })}
             </Paper>
           )}
         </Transition>

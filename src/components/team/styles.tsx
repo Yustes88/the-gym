@@ -59,6 +59,7 @@ export const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
      flexDirection: 'column',
      alignItems: 'center',
+     margin: 0,
     },
   },
 

@@ -6,13 +6,13 @@ const LocaleSwitcher = () => {
   const currentLocale = router.locale;
 
 	return (
-		<div>
+		<Button.Group>
 			 <Button compact uppercase variant={currentLocale === 'th' ? 'filled' : 'default'}
       onClick={() => {
         router.push('/main', '/main', { locale: 'th' })
       }}
     >
-      Thai
+      Th
     </Button>
 
 			 <Button compact uppercase variant={currentLocale === 'en' ? 'filled' : 'default'}
@@ -20,9 +20,9 @@ const LocaleSwitcher = () => {
         router.push('/main', '/main', { locale: 'en' })
       }}
     >
-      Eng
+      En
     </Button>
-		</div>
+		</Button.Group>
 	)
 }
 
