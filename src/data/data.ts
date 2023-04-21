@@ -28,7 +28,7 @@ export const HeaderItems: HeaderItemsTypes[] =  [
 
   export const GymSocials: SocialsTypes[] = [
     {
-      link: 'https://web.facebook.com/search/top?q=the%20gym%20fitness%20center',
+      link: 'https://web.facebook.com/fitness.Studio.at.lampang',
       id: randomId(),
       label: 'Facebook',
     },
