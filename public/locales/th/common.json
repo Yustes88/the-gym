@@ -2,11 +2,11 @@
   "btn_join": "เข้าร่วมเดี๋ยวนี้",
   "nav" : [
     {
-      "link": "/about",
+      "link": "/",
       "label": "หน้าตา"
     },
     {
-      "link": "/pricing",
+      "link": "/about",
       "label": "ราคา"
     },
     {

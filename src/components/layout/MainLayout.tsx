@@ -1,7 +1,7 @@
-import {DashboardLayoutProps} from "@/components/layout/types";
+import {LayoutProps} from "@/components/layout/types";
 import {useStyles} from "./styles";
 
-export function MainLayout(props: DashboardLayoutProps) {
+export function MainLayout(props: LayoutProps) {
     const {classes} = useStyles();
 
     return (

@@ -2,12 +2,12 @@
   "btn_join": "Join now",
   "nav" : [
     {
-      "link": "/about",
+      "link": "/",
       "label": "Features"
     },
     {
-      "link": "/pricing",
-      "label": "Pricing"
+      "link": "/about",
+      "label": "About us"
     },
     {
       "link": "/learn",

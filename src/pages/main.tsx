@@ -8,58 +8,52 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { PriceLayout } from "@/components/price/PriceLayout";
 import { TeamLayout } from "@/components/team/TeamLayout";
 import { HeaderItems } from "@/data/data";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
-        'common',
-        'main',
-        'news',
-        'price',
-        'team',
-        'faq'
+        "common",
+        "main",
+        "news",
+        "price",
+        "team",
+        "faq",
       ])),
       // Will be passed to the page component as props
     },
-  }
+  };
 }
-
-
 
 export default function Main() {
   return (
     <>
-    <MainLayout>
-    <HeaderResponsive links={HeaderItems}/>
+      <MainLayout>
+        <HeaderResponsive links={HeaderItems} />
 
-      <Section>
-      <HeroImageBackground/>
-      </Section>
+        <Section>
+          <HeroImageBackground />
+        </Section>
 
-      <Section>
-      <IntervalImages/>
-      </Section>
+        <Section>
+          <IntervalImages />
+        </Section>
 
-      <Section>
-      <PriceLayout/>
-      </Section>
+        <Section>
+          <PriceLayout />
+        </Section>
 
-      <Section>
-        <TeamLayout/>
-      </Section>
+        <Section>
+          <TeamLayout />
+        </Section>
 
-      <Section>
-        <Faq/>
-      </Section>
+        <Section>
+          <Faq />
+        </Section>
 
-        <FooterCentered/>
-
-    </MainLayout>
+        <FooterCentered />
+      </MainLayout>
     </>
-  )
+  );
 }
-
