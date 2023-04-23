@@ -3,7 +3,7 @@
   "nav" : [
     {
       "link": "/",
-      "label": "Features"
+      "label": "Home"
     },
     {
       "link": "/about",
