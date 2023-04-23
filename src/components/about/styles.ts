@@ -1,5 +1,16 @@
-import { createStyles, rem } from "@mantine/core";
+import { createStyles, keyframes, rem } from "@mantine/core";
 import { opacity } from "../hero/styles";
+
+export const bounce = keyframes({
+  "0%": { 
+    transform: "translateY(0)" },
+   "50%": { 
+    transform: "translateY(1rem)"
+   },
+   "100%": { 
+    transform: "translateY(0)"
+   }
+});
 
 export const useStyles = createStyles((theme) => ({
   container: {
@@ -73,13 +84,24 @@ export const useStyles = createStyles((theme) => ({
     },
   },
 
+  actionButton: {
+    minWidth: 'auto',
+    width: 'auto',
+    minHeight: 'auto',
+    height: 'auto',
+  },
+
+  actionIcon: {
+    width: rem(50),
+    height: rem(50),
+  },
+
   controls: {
     display: 'flex',
     justifyContent: 'center',
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
-    opacity: 0,
-    animation: `${opacity} 3s 2s forwards`,
+    animation: `${bounce} 3s forwards infinite`,
 
     [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',

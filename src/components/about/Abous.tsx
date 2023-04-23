@@ -31,8 +31,8 @@ export function About() {
     </div>
     
       <div className={classes.controls}>
-        <ActionIcon variant="transparent" size='xl'>
-          <ChevronIcon/>
+        <ActionIcon  variant="transparent" className={classes.actionButton}>
+          <ChevronIcon className={classes.actionIcon}/>
         </ActionIcon>
       </div>
       </>
