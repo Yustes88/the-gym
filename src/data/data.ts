@@ -9,12 +9,12 @@ export type HeaderItemsTypes = {
 
 export const HeaderItems: HeaderItemsTypes[] =  [
     {
-      "link": "/about",
-      "label": "Features"
+      "link": "/",
+      "label": "Home"
     },
     {
-      "link": "/pricing",
-      "label": "Pricing"
+      "link": "/about",
+      "label": "About"
     },
     {
       "link": "/learn",

@@ -14,6 +14,7 @@ import { Translation, useTranslation } from 'next-i18next';
 import { GymSocials, HeaderItemsTypes } from '@/data/data';
 import LocaleSwitcher from '../locale-switcher/LocaleSwitcher';
 import { Socials } from '../socials/Socials';
+import Link from 'next/link';
 
 
 
@@ -50,7 +51,7 @@ const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
 
 
      const items = nav.map((link) => (
-      <a
+      <Link
         key={link.label}
         href={link.link}
         className={cx(classes.link, { [classes.linkActive]: active === link.link })}
@@ -61,7 +62,7 @@ const nav: HeaderItemsTypes[] = (t('nav', {returnObjects: true}));
         }}
       >
         {link.label}
-      </a>
+      </Link>
     ));
 
   

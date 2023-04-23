@@ -9,7 +9,7 @@ const LocaleSwitcher = () => {
 		<Button.Group>
 			 <Button compact uppercase variant={currentLocale === 'th' ? 'filled' : 'default'}
       onClick={() => {
-        router.push('/main', '/main', { locale: 'th' })
+        router.push('/', '/', { locale: 'th' })
       }}
     >
       Th
@@ -17,7 +17,7 @@ const LocaleSwitcher = () => {
 
 			 <Button compact uppercase variant={currentLocale === 'en' ? 'filled' : 'default'}
       onClick={() => {
-        router.push('/main', '/main', { locale: 'en' })
+        router.push('/', '/', { locale: 'en' })
       }}
     >
       En
